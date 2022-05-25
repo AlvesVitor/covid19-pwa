@@ -1,17 +1,17 @@
 import React, { memo } from 'react'
-import { Card, Typography, Button, Select, MenuItem } from '../../../components'
+import { Card, Button, Select, MenuItem } from '../../../components'
 import COUNTRIES from '../../../commons/constants/countries'
-import { CardPanelContentStyled, ItemStyled } from './style'
+import { CardPanelContentStyled, ItemStyled, Title, Description } from './style'
 
 const navigatorHasShare = navigator.share
 
 function Panel({ updateAt, onChange, data, country, getCoviddata }) {
-  const { cases, recovered, deaths, todayCases, todayDeaths } = data
+  const { recovered } = data
 
   const renderCountries = (country, index) => (
     <MenuItem key={`country-${index}`} value={country.value}>
       <ItemStyled>
-        <div>{country.label}</div>
+        <Description>{country.label}</Description>
         <img src={country.flag} alt={`País-${country.label}`} />
       </ItemStyled>
     </MenuItem>
@@ -51,9 +51,10 @@ function Panel({ updateAt, onChange, data, country, getCoviddata }) {
     <Card>
       <CardPanelContentStyled>
         <div>
-          <Typography variant="h5" component="span" color="primary">COVID19</Typography>
-          <Typography variant="h6" component="span" color="primary">Painel Coronavírus</Typography>
-          <Typography variant="body2" component="span" color="primary">Atualizado em: {updateAt}</Typography>
+          {/* <Typography variant="h5" component="span" color="primary">COVID19</Typography> */}
+          <Title>Painel Coronavírus </Title>
+
+          <Description>Atualizado em: {updateAt}</Description>
           <div className="pt-2">
             <Select onChange={onChange} value={country}>
               {COUNTRIES.map(renderCountries)}

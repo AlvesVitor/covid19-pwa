@@ -1,16 +1,18 @@
-import React, { memo } from 'react'
-import { Card as CardUI } from '../../../components'
+import React, { memo } from 'react';
+import { Card as CardUI } from '../../../components';
 import {
   LabelStyled,
   ValueStyled,
   CardContentStyled
-} from './style'
+} from './style';
+
+import { formatNumber } from 'commons/utils'
 
 function Card({ value, label, color }) {
   return (
-    <CardUI>
+    <CardUI >
       <CardContentStyled color={color}>
-        <ValueStyled>{value}</ValueStyled>
+        <ValueStyled>{formatNumber(value)}</ValueStyled>
         <LabelStyled>{label}</LabelStyled>
       </CardContentStyled>
     </CardUI>
