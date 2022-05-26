@@ -9,5 +9,5 @@ https://coronavirus-19-api.herokuapp.com/countries
 ## Layout
 
 <p align="left">
-  <img alt="Interface da aplicação" src="./github/image.gif" width="80%" height="auto">
+  <img alt="Interface da aplicação" src="./github/image.gif" width="100%" height="auto">
 </p>
