@@ -4,7 +4,7 @@ O projeto consiste em um Progressive Web Application desenvolvido em React para 
 
 ## API
 
-https://coronavirus-19-api.herokuapp.com/countries
+https://coronavirus-19-api.herokuapp.com
 
 ## Layout
 
